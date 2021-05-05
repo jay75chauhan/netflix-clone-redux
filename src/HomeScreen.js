@@ -22,9 +22,17 @@ function HomeScreen() {
 
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
 
+      <Row title="Upcoming" fetchUrl={requests.fetchUpcoming} />
+
+      <Row title="Animation Movies" fetchUrl={requests.fetchAnimation} />
+
+      <Row title="Sci-Fi Movies" fetchUrl={requests.fetchSciFiMovies} />
+
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
 
       <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
+
+      <Row title="Mystery Movies" fetchUrl={requests.fetchMysteryMovies} />
 
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
 
