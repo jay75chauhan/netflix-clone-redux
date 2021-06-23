@@ -11,10 +11,10 @@
   height: 190px;
 }
 .baneer_title {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: 900;
 
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.8rem;
 }
 .banner_desription {
   width: 45rem;
@@ -24,6 +24,7 @@
   max-width: 360px;
   height: 80px;
 }
+
 .banner--fadeBottom {
   height: 7.4rem;
   background-image: linear-gradient(
