@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 
 function Fullpage({ match }) {
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  // const API_KEY = process.env.API_KEY;
   const { id } = useParams();
   const [movie, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -18,7 +18,7 @@ function Fullpage({ match }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=e2914f74f6bbde3926e25851c5fa6f36`
       );
       const { data } = request;
       setMovie(data);
