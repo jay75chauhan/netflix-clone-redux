@@ -45,10 +45,12 @@ function Banner() {
             <button className="banner_button">Play</button>
             <button className="banner_button">My List</button>
           </div>
-          <span className="banner_desription">
-            {truncate(movie?.overview, 160)}
-          </span>
+
+          <div className="banner_desription">
+            {truncate(movie?.overview, 200)}
+          </div>
         </div>
+
         <div className="banner--fadeBottom" />
       </Fade>
     </header>

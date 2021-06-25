@@ -5,6 +5,7 @@ import HomeScreen from "./screens/HomeScreen";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginScreen from "./screens/LoginScreen";
 import { auth } from "./firebase";
+import Nav from "./Nav";
 import { login, logout, selectUser } from "./features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProfileScreen from "./screens/ProfileScreen";
@@ -36,17 +37,20 @@ function App() {
         {!user ? (
           <LoginScreen />
         ) : (
-          <Switch>
-            <Route exact path="/profile">
-              <ProfileScreen />
-            </Route>
-            <Route exact path="/">
-              <HomeScreen />
-            </Route>
-            <Route path="/movie/:id">
-              <Fullpage />
-            </Route>
-          </Switch>
+          <>
+            <Nav />
+            <Switch>
+              <Route exact path="/profile">
+                <ProfileScreen />
+              </Route>
+              <Route exact path="/">
+                <HomeScreen />
+              </Route>
+              <Route path="/movie/:id">
+                <Fullpage />
+              </Route>
+            </Switch>
+          </>
         )}
       </Router>
     </div>

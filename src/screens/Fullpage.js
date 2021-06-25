@@ -44,14 +44,10 @@ function Fullpage({ match }) {
   //for youtube
   const opts = {
     playerVars: { autoplay: 1 },
-
-    height: "390",
-    width: "640",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
   };
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "...." : string;
+  }
 
   return (
     <div className="fullpage">
@@ -99,7 +95,7 @@ function Fullpage({ match }) {
                 Play Trailer
               </button>
             </div>
-            <p className="fp__description">{movie.overview}</p>
+            <p className="fp__description">{truncate(movie.overview, 250)}</p>
           </div>
           <div className="fp--fadebottom" />
         </header>

@@ -4,7 +4,7 @@ import "./Row.css";
 import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
-import LazyLoad from "react-lazyload";
+
 
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
@@ -34,13 +34,13 @@ function Row({ title, fetchUrl }) {
             <Fade right>
               <Link to={`/movie/${movie.id}`}>
                 <div className="card">
-                  <LazyLoad height={200}>
+                 
                     <img
                       className="img1"
                       src={`${base_url}${movie.poster_path}`}
                       alt={movie.name}
                     ></img>
-                  </LazyLoad>
+                 
 
                   <div className="detail">
                     <h3>
