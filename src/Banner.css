@@ -12,9 +12,9 @@
 }
 .baneer_title {
   font-size: 5rem;
-  font-weight: 900;
+  font-weight: 1000;
 
-  padding-bottom: 0.8rem;
+  padding-bottom: 15px;
 }
 .banner_desription {
   width: 45rem;
@@ -53,4 +53,13 @@
   color: #000;
   background-color: #e6e6e6;
   transition: all 0.2s;
+}
+
+h1 {
+  font-size: 80px;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 }

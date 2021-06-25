@@ -8,6 +8,7 @@ import { auth } from "./firebase";
 import { login, logout, selectUser } from "./features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProfileScreen from "./screens/ProfileScreen";
+import Fullpage from "./screens/Fullpage";
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <HomeScreen />
+            </Route>
+            <Route path="/movie/:id">
+              <Fullpage />
             </Route>
           </Switch>
         )}

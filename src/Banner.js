@@ -4,6 +4,9 @@ import "./Banner.css";
 import requests from "./Requests";
 import React from "react";
 
+import "react-typewriting-effect/dist/index.css";
+import Fade from "react-reveal/Fade";
+
 function Banner() {
   const [movie, setMovie] = useState([]);
 
@@ -33,17 +36,21 @@ function Banner() {
         backgroundPosition: "center center ",
       }}
     >
-      <div className="banner_contents">
-        <h1 className="banner_title">
-          {movie?.title || movie?.name || movie?.orignal_name}
-        </h1>
-        <div className="baneer_buttons">
-          <button className="banner_button">Play</button>
-          <button className="banner_button">My List</button>
+      <Fade top>
+        <div className="banner_contents">
+          <h1 className="banner_title">
+            {movie?.title || movie?.name || movie?.orignal_name}
+          </h1>
+          <div className="baneer_buttons">
+            <button className="banner_button">Play</button>
+            <button className="banner_button">My List</button>
+          </div>
+          <h1 className="banner_desription">
+            {truncate(movie?.overview, 160)}
+          </h1>
         </div>
-        <h1 className="banner_desription">{truncate(movie?.overview, 160)}</h1>
-      </div>
-      <div className="banner--fadeBottom" />
+        <div className="banner--fadeBottom" />
+      </Fade>
     </header>
   );
 }
