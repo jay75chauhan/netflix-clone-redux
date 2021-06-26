@@ -3,14 +3,15 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import { auth } from "../firebase";
 import "./ProfileScreen.css";
-import Nav from "../Nav";
 
 function ProfileScreen() {
   const user = useSelector(selectUser);
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "...." : string;
+  }
 
   return (
     <div className="profileScreen">
-      <Nav />
       <div className="ProfileScreen_body">
         <h1>Edit Profile</h1>
         <div className="profileScreen_info">
@@ -19,7 +20,7 @@ function ProfileScreen() {
             alt=""
           />
           <div className="profileScreen_detail">
-            <h2>{user.email}</h2>
+            <h2>{truncate(user.email, 15)}</h2>
             <div className="profileScreen_plans">
               <h3>Plans</h3>
               <p></p>

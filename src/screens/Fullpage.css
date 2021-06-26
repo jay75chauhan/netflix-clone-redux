@@ -82,10 +82,12 @@ header {
   color: white;
   outline: none;
   border: none;
+  font-size: 1rem;
+  font-weight: 900;
   font-weight: 700;
   border-radius: 0.2vw;
-  padding: 0.5rem 2rem;
-  background-color: rgba(51, 51, 51, 0.5);
+  padding: 0.7rem 2rem;
+  background-color: rgba(51, 51, 51, 0.9);
 }
 
 .fp__button:hover {

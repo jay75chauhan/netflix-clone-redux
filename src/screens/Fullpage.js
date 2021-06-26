@@ -10,6 +10,8 @@ import Slide from "react-reveal/Slide";
 
 function Fullpage({ match }) {
   // const API_KEY = process.env.API_KEY;
+  const erImg =
+    "https://cdn.dribbble.com/users/1372590/screenshots/3569723/artboard_copy_2.jpg";
   const { id } = useParams();
   const [movie, setMovie] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
@@ -61,13 +63,16 @@ function Fullpage({ match }) {
           className="fp"
           style={{
             backgroundSize: "cover",
-            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}"    )`,
             backgroundPosition: "center center",
           }}
         >
           <div className="fp__content">
             <h1 className="fp__title">
-              {movie?.title || movie?.name || movie?.original_name}
+              {movie?.title ||
+                movie?.name ||
+                movie?.original_name ||
+                " data unavailable go back HomeScreen...."}
             </h1>
             <div className="row-1">
               <div className="fp__date">
