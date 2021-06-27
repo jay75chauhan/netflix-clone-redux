@@ -20,7 +20,7 @@ function Fullpage({ match }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(
-        `https://api.themoviedb.org/3/movie/${id}?api_key=e2914f74f6bbde3926e25851c5fa6f36`
+        `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}`
       );
       const { data } = request;
       setMovie(data);
