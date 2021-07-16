@@ -39,6 +39,13 @@ function LoginScreen() {
                   GET STARTED
                 </button>
               </form>
+              <a
+                className="tag"
+                href="https://github.com/jay75chauhan"
+                target="_blank"
+              >
+                <span>created by</span> 🔥jayChauhan🔥
+              </a>{" "}
             </div>
           </>
         )}

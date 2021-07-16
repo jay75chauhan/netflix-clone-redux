@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 import VisibilityOutlinedIcon from "@material-ui/icons/VisibilityOutlined";
 
-
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
@@ -34,13 +33,11 @@ function Row({ title, fetchUrl }) {
             <Fade right>
               <Link to={`/movie/${movie.id}`}>
                 <div className="card">
-                 
-                    <img
-                      className="img1"
-                      src={`${base_url}${movie.poster_path}`}
-                      alt={movie.name}
-                    ></img>
-                 
+                  <img
+                    className="img1"
+                    src={`${base_url}${movie.poster_path}`}
+                    alt={movie.name}
+                  ></img>
 
                   <div className="detail">
                     <h3>

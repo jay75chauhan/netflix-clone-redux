@@ -91,6 +91,13 @@
   border-radius: 1px 10px 10px 1px;
   cursor: pointer;
 }
+.tag {
+  margin-top: 80px;
+}
+.tag:hover {
+  color: #e50914;
+}
+
 @media only screen and (max-width: 600px) {
   .loginScreen_body > h1 {
     font-size: 1.5625rem;
